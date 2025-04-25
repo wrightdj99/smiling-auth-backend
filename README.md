@@ -9,7 +9,7 @@ Welcome to the **Smiling Friends Web App**, a fan-made project inspired by the h
 - Submit Smile Requests like in the real show
 - Role-based login and permissions
 - Assign smile requests to Smiling Friends Employees like Pim, Charlie, Alan or Glep.
-- ##This project was made primarily with MongoDB, The Mongoose ORM for Node.js, Express.js and React/Vite.
+- ## This project was made primarily with MongoDB, The Mongoose ORM for Node.js, Express.js and React/Vite.
 ---
 
 ## 🚀 Getting Started
