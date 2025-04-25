@@ -28,7 +28,19 @@ Clone the repo:
 git clone https://github.com/wrightdj99/smiling-friends-webapp.git
 cd smiling-friends-web-app
 ```
+### Running the back-end
 
+To run the back-end Express.js server, all you need to do is cd to wherever it's stored on your local machine and run the following:
+
+```bash
+npm run dev
+```
+
+To run the front-end client React app, do the same thing (i.e. cd to where you've stored the client) and run this:
+
+```bash
+npm run dev
+```
 ### PRs
 
 PRs are welcome! If you have ideas, character features, or anything else, feel free to fork and submit a pull request.
