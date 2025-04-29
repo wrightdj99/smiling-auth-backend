@@ -1,3 +1,6 @@
+<h1>Instructions for running the client are in the base directory of this project, but if you have any other questions regarding React + Vite, see the base documentation below.</h1>
+<hr>
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
