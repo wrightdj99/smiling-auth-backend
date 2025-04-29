@@ -5,12 +5,14 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Request from './components/Request';
 import About from './components/About';
+import Register from './components/Register';
 
 const App = () => (
   <Router>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/register" element={<Register/>}/>
       <Route path='/createRequest' element={<Request/>}/>
       <Route path='/about' element={<About/>}/>
     </Routes>

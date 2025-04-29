@@ -3,10 +3,21 @@ const dotenv = require("dotenv").config();
 const dbConnect = require("./config/dbConnect");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
+const cors = require("cors");
+
+const corsOptions = {
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST'],
+    allowedHeaders: 'Content-Type',
+    credentials: true,
+};
 
 dbConnect();
 
 const app = express();
+
+//Accounting for CORS
+app.use(cors(corsOptions));
 
 //Middleware
 app.use(express.json());
