@@ -1,9 +1,12 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import Header from "./common/Header";
 
 function Home() {
+    const { state } = useLocation();
     return (
         <div>
-            <h1>Home</h1>
+            <h1>Home for {state.username}</h1>
         </div>
     );
 }
