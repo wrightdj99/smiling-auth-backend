@@ -15,6 +15,7 @@ function Login() {
             if (res.data.token) {
                 const token = res.data.token;
                 localStorage.setItem("jsonWebToken", token);
+                localStorage.setItem("username", username);
                 navigate('/', { state: { username: username, token: token }});
             }
         }).catch(error => {

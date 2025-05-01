@@ -6,7 +6,7 @@ function Home() {
     const { state } = useLocation();
     return (
         <div>
-            <h1>Home for {state.username}</h1>
+            <h1>Home for {localStorage.getItem("username")}</h1>
         </div>
     );
 }
