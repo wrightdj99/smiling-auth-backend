@@ -6,7 +6,7 @@ const createRequest = async (req, res) => {
         const { username, title, content } = req.body; 
         const user = await User.findOne({ username });
         if (!user) {
-            return res.status(404).json({message: `No user was found with that username`});
+            res.status(404).json({message: `No user was found with that username`});
         }
 
         const newRequest = new Request({
@@ -43,7 +43,7 @@ const editRequest = async (req, res) => {
 
 const getAllRequests = async (req, res) => {
     try {
-        const { username } = req.body;
+        const { username } = req.query;
         const user = await User.findOne({ username });
         if (!user) {
             return res.status(404).json({message: `No user was found with that username`});
