@@ -15,6 +15,14 @@ const userSchema = new mongoose.Schema({
         required: true,
         enum: ["admin", "manager", "user"],
     },
+    firstName: {
+        type: String,
+        required: true,
+    },
+    lastName: {
+        type: String,
+        required: true,
+    }
     
 }, 
 {

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 function Header() {
     const navigate = useNavigate();
     function logout() {
@@ -11,6 +12,7 @@ function Header() {
         <div>
             <h1>Smiling Friends</h1>
             <button onClick={logout.bind(this)}>Logout</button>
+            <Link to={"/profile"} state={{username: localStorage.getItem("username")}}>Profile test</Link>
             <hr/>
         </div>
     );

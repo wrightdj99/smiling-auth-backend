@@ -7,6 +7,7 @@ import Request from './components/Request';
 import About from './components/About';
 import Register from './components/Register';
 import Header from './components/common/Header';
+import Profile from './components/Profile';
 
 const isAuthenticated = () => {
   return localStorage.getItem("jsonWebToken") !== null;
@@ -41,6 +42,12 @@ const App = () => (
         <PrivateRoute>
           <Header/>
           <About/>
+        </PrivateRoute>
+      }/>
+      <Route path='/profile' element={
+        <PrivateRoute>
+          <Header/>
+          <Profile/>
         </PrivateRoute>
       }/>
     </Routes>

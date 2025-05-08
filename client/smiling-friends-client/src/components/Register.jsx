@@ -5,12 +5,16 @@ function Register() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [role, setRole] = useState('');
 
     function handleSubmit () {
         axios.post("http://localhost:7001/api/auth/register", {
             "username": username,
             "password": password,
+            "firstName": firstName,
+            "lastName": lastName,
             "role": role,
         }).then(res => {
             console.log(res.data);
@@ -23,6 +27,8 @@ function Register() {
         <div>
             <h1>Register</h1>
             <hr/>
+            <h2>First Name: <input type="text" onChange={e=>setFirstName(e.target.value)} id="firstName"/></h2>
+            <h2>Last Name: <input type="text" onChange={e=>setLastName(e.target.value)} id="lastName"/></h2>
             <h2>Username: <input type="text" onChange={e=>setUsername(e.target.value)} id="username"/></h2>
             <h2>Password: <input type="password" onChange={e=>setPassword(e.target.value)} id="password"/></h2>
             <h2>Role: 
