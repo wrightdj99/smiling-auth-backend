@@ -12,3 +12,15 @@ export const formatTime = (timeToFormat) => {
     hours = hours ? hours : 12; // the hour '0' should be '12'
     return `${hours}:${minutes} ${ampm}`;
 }
+
+export const morningOrAfternoonGreeting = (timeToFormat, nameToGreet) => {
+    const date = new Date(timeToFormat);
+    const hours = date.getHours();
+    if (hours < 12) {
+        return "Good morning, " + nameToGreet+"!";
+    } else if (hours < 18) {
+        return "Good afternoon, " + nameToGreet+"!";
+    } else {
+        return "Good evening, " + nameToGreet+"!";
+    }
+}

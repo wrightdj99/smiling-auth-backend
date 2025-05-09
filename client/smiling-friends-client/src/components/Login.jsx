@@ -14,8 +14,10 @@ function Login() {
         }).then(res => {
             if (res.data.token) {
                 const token = res.data.token;
+                const role = res.data.userRole;
                 localStorage.setItem("jsonWebToken", token);
                 localStorage.setItem("username", username);
+                localStorage.setItem("role", role);
                 navigate('/', { state: { username: username, token: token }});
             }
         }).catch(error => {

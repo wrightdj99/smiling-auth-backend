@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-ro
 import Home from './components/Home';
 import Login from './components/Login';
 import Request from './components/Request';
+import CreateRequest from './components/CreateRequest';
 import About from './components/About';
 import Register from './components/Register';
 import Header from './components/common/Header';
@@ -35,7 +36,7 @@ const App = () => (
       <Route path='/createRequest' element={
         <PrivateRoute>
           <Header/>
-          <Request/>
+          <CreateRequest/>
         </PrivateRoute>
       }/>
       <Route path='/about' element={
