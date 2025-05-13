@@ -3,7 +3,7 @@ const verifyToken = require("../middlewares/authMiddleware");
 const authorizeRoles = require("../middlewares/roleMiddleware");
 const userModel = require("../models/userModel");
 const router = express.Router();
-
+const { viewProfile } = require("../controllers/profileController");
 //For admin only
 router.get("/admin", verifyToken, authorizeRoles("admin"), (req, res) => {
     res.json({message: "Welcome admin!"})
@@ -17,10 +17,6 @@ router.get("/user", verifyToken, authorizeRoles("admin", "manager", "user"), (re
     res.json({message: "Welcome user!"})
 });
 
-router.post("/profile", function (req, res) {
-    userModel.findOne({ username: req.body.username }).then(function (data) {
-        res.json({data: data})
-    })
-});
+router.post("/viewProfile", viewProfile);
 
 module.exports = router;

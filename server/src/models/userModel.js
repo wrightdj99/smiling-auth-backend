@@ -22,6 +22,9 @@ const userSchema = new mongoose.Schema({
     lastName: {
         type: String,
         required: true,
+    },
+    profilePic: {
+        type: String, //Just the filename.
     }
     
 }, 

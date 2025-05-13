@@ -21,7 +21,7 @@ function Login() {
                 navigate('/', { state: { username: username, token: token }});
             }
         }).catch(error => {
-            console.error("Error in posting the data");
+            console.error(error);
         });
     }
 

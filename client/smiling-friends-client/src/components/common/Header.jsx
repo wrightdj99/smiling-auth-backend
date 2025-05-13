@@ -12,9 +12,9 @@ function Header() {
         <div>
             <h1>Smiling Friends</h1>
             <button onClick={logout.bind(this)}>Logout</button>
-            <Link to={"/profile"} state={{username: localStorage.getItem("username")}}>Profile test</Link>
             <Link to={"/"} state={{username: localStorage.getItem("username")}}>Home</Link>
             <Link to={"/createRequest"} state={{username: localStorage.getItem("username")}}>Create Request</Link>
+            <Link to={"/viewProfile"} state={{username: localStorage.getItem("username")}}>View/Edit Profile</Link>
             <hr/>
         </div>
     );
